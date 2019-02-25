@@ -8,7 +8,7 @@ export const cleanPhotos = (photos) => {
       id, 
       description, 
       photo_tags,
-      url: urls.thumb,
+      url: urls.small,
       user: {
         id: user.id,
         instagram_username,

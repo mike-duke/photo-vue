@@ -1,12 +1,12 @@
 <template>
   <section class="photo-list">
-    <article v-for="photo in photos" :key="photo.id">
-      <img :src="photo.url" :alt="photo.description">
-    </article>
+    <Photo v-for="photo in photos" :photo="photo" :key="photo.id"></Photo>
   </section>
 </template>
 
 <script>
+  import Photo from './Photo.vue';
+
   export default {
     name: 'PhotoList',
     props: {
@@ -14,8 +14,17 @@
         type: Array,
         required: true
       }
+    },
+    components: {
+      Photo
     }
   }
 </script>
 
-<style></style>
+<style>
+  .photo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
