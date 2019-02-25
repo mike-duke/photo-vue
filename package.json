@@ -9,6 +9,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "unsplash-js": "^5.0.0",
     "vue": "^2.6.6"
   },
   "devDependencies": {
