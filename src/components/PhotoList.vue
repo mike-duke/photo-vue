@@ -1,5 +1,8 @@
 <template>
   <section class="photo-list">
+    <h2>You searched for 
+      <p>{{ searchTerm }}</p>
+    </h2>
     <Photo v-for="photo in photos" :photo="photo" :key="photo.id"></Photo>
   </section>
 </template>
@@ -12,6 +15,10 @@
     props: {
       photos: {
         type: Array,
+        required: true
+      },
+      searchTerm: {
+        type: String,
         required: true
       }
     },

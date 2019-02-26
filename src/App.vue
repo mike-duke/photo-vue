@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <SearchForm v-if="!photos.length" @add-search-term="fetchPhotos"></SearchForm>
-    <PhotoList v-else :photos="photos"></PhotoList>
+    <PhotoList v-else :photos="photos" :searchTerm="searchTerm"></PhotoList>
   </div>
 </template>
 
@@ -22,7 +22,7 @@
     },
     methods: {
       async fetchPhotos(searchTerm) {
-        // this.searchTerm = searchTerm;
+        this.searchTerm = searchTerm;
         // const url = 'https://api.unsplash.com/search/photos'
         // const extras = '&per_page=25&orientation=squarish';
         // const authorization = `Client-ID ${keys.appKey}`;
@@ -48,6 +48,12 @@
   * {
     box-sizing: border-box;
   }
+
+  html {
+    margin: 0;
+    padding: 0;
+    background: black
+  }
   
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -55,6 +61,12 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    margin: 0;
+    min-height: 100vh;
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
   }
 </style>
