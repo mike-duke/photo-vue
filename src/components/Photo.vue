@@ -26,6 +26,6 @@
     height: 400px;
     width: 300px;
     background-size: cover;
-
+    margin: 20px;
   }
 </style>
