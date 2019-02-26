@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import SearchForm from './components/SearchForm.vue';
+  import SearchForm from './components/';
   import PhotoList from './components/PhotoList.vue';
   import { keys } from '../keys.js';
   import { cleanPhotos } from './cleaner';
