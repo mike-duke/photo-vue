@@ -1,8 +1,9 @@
 
 <template>
-  <article class="photo" :style="{ backgroundImage: `URL(${photo.url})` }">
+  <article class="photo">
+    <img :src="photo.url" :alt="photo.description">
     <div class="photo-info">
-      <p>{{ photo.description }}</p>
+      <p></p>
       <ul>
         <li v-for="(tag, index) in photo.tags" :key="index">{{ tag }}</li>
       </ul>
