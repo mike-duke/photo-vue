@@ -11,7 +11,7 @@
     <div class="photo-info">
       <p>instagram: {{ photo.user.instagram_username }}</p>
       <p>location: {{ photo.user.location }}</p>
-      <p>Tags: 
+      <p>Tags:
         <ul>
           <li v-for="(tag, index) in photo.photo_tags" :key="index">#{{ tag.title }}</li>
         </ul>
@@ -20,15 +20,15 @@
   </article>
 </template>
 <script>
-  export default {
-    name: 'Photo',
-    props: {
-      photo: {
-        type: Object,
-        required: true
-      }
-    }
-  }
+export default {
+  name: 'Photo',
+  props: {
+    photo: {
+      type: Object,
+      required: true,
+    },
+  },
+};
 </script>
 <style lang="scss">
   .photo {
