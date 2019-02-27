@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <SearchForm v-if="!photos.length" @add-search-term="fetchPhotos"></SearchForm>
+    <SearchForm v-if="!photos.length" @addSearchTerm="fetchPhotos"></SearchForm>
     <PhotoList v-else :photos="photos" :searchTerm="searchTerm"></PhotoList>
   </div>
 </template>

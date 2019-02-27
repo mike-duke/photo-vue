@@ -20,9 +20,8 @@
     },
     methods: {
       handleSubmit() {
-        this.$emit('add-search-term', this.searchTerm);
-        this.searchTerm = '',
-        this.disabled = true
+        this.$emit('addSearchTerm', this.searchTerm);
+        this.searchTerm = ''
       }
     }
   }
