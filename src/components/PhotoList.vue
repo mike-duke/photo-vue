@@ -43,6 +43,7 @@ export default {
 
   h2 {
     color: whitesmoke;
+    font-size: 2.5rem;
   }
 }
 
