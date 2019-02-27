@@ -33,7 +33,7 @@
 <style lang="scss">
   .photo {
     height: 500px;
-    width: 96%;
+    width: 85%;
     background: whitesmoke;
     margin: 20px;
     box-shadow: 5px 5px 5px darkslategray;
@@ -53,10 +53,15 @@
     p {
       margin: 10px 0;
     }
+
+     @media screen and (min-width: 400px) {
+      width: 300px;
+    }
   }
 
   .photo-info {
     padding: 10px;
+    text-align: initial;
   }
 
   .image {

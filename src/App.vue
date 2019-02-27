@@ -24,7 +24,7 @@
       async fetchPhotos(searchTerm) {
         this.searchTerm = searchTerm;
         // const url = 'https://api.unsplash.com/search/photos'
-        // const extras = '&per_page=25&orientation=squarish';
+        // const extras = '&per_page=24&orientation=squarish';
         // const authorization = `Client-ID ${keys.appKey}`;
         // const response = await fetch(`${url}?query=${this.searchTerm}${extras}`, {
         //   method: 'GET',
@@ -62,6 +62,8 @@
     min-height: 100vh;
     background: url('../public/pexels-photo-296649.jpeg');
     background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
