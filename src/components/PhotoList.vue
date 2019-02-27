@@ -3,7 +3,9 @@
     <h2>Viewing
       <span class="search-term">{{ searchTerm }}</span>
     </h2>
-    <Photo v-for="photo in photos" :photo="photo" :key="photo.id"></Photo>
+    <div class="photos">
+      <Photo v-for="photo in photos" :photo="photo" :key="photo.id"></Photo>
+    </div>
   </section>
 </template>
 
@@ -41,6 +43,14 @@
     
     h2 {
       color: whitesmoke;
+    }
+
+    @media screen and (min-width: 400px) {
+      .photos {
+        display: flex;
+        flex-wrap: wrap;
+        
+      }
     }
   }
 
