@@ -61,6 +61,7 @@
     margin: 0;
     min-height: 100vh;
     background: url('../public/pexels-photo-296649.jpeg');
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,4 +71,3 @@
 
 
 /* Photo by Vladyslav Dukhin from Pexels */
-

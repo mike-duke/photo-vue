@@ -4,7 +4,7 @@
     <h3>What would you like to see?</h3>
     <form @submit.prevent="handleSubmit">
       <input type="text" class="search-input" placeholder="Enter search term" v-model="searchTerm" autofocus>
-      <button>Submit</button>
+      <button :disabled="!searchTerm.length">Submit</button>
     </form>
   </section>
 </template>
@@ -15,14 +15,14 @@
     name: 'searchForm',
     data() {
       return {
-        searchTerm: ''
+        searchTerm: '',
       }
     },
     methods: {
       handleSubmit() {
-        console.log(this.searchTerm)
         this.$emit('add-search-term', this.searchTerm);
-        this.searchTerm = ''
+        this.searchTerm = '',
+        this.disabled = true
       }
     }
   }
@@ -62,6 +62,10 @@
       margin: 0 auto;
       background: darkslategray;
       color: whitesmoke;
+    }
+
+    button:disabled {
+      background: gray;
     }
 
     @media screen and (max-width: 400px) {
