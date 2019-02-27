@@ -5,6 +5,7 @@ export const cleanPhotos = (photos) => photos.map((photo) => {
     photo_tags,
     user,
     urls,
+    color,
   } = photo;
 
   const {
@@ -14,8 +15,10 @@ export const cleanPhotos = (photos) => photos.map((photo) => {
     portfolio_url,
     profile_image,
   } = user;
+
   return {
     id,
+    color,
     description,
     photo_tags,
     url: urls.small,

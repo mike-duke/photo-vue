@@ -5,15 +5,17 @@
       <img :src="photo.user.profile_image" :alt="photo.user.name" class="user-image">
       <p>Photo by {{ photo.user.name }}</p>
     </div>
-    <div class="image">
+    <div class="image-container" :style="{backround: photo.color}">
       <img :src="photo.url" :alt="photo.description" class="photo-img">
     </div>
     <div class="photo-info">
-      <p>instagram: {{ photo.user.instagram_username }}</p>
-      <p>location: {{ photo.user.location }}</p>
-      <p>Tags:
+      <p><span class="heading">Instagram:</span> {{ photo.user.instagram_username }}</p>
+      <p><span class="heading">Location:</span> {{ photo.user.location }}</p>
+      <p><span class="heading">Tags:</span>
         <ul>
-          <li v-for="(tag, index) in photo.photo_tags" :key="index">#{{ tag.title }}</li>
+          <li v-for="(tag, index) in photo.photo_tags" :key="index">
+            <a class="tags" href="" @click="handleClick(tag.title)">#{{ tag.title }}</a>
+          </li>
         </ul>
       </p>
     </div>
@@ -28,11 +30,16 @@ export default {
       required: true,
     },
   },
+  methods: {
+    handleClick() {
+      this.$emit('addSearchTerm')
+    }
+  }
 };
 </script>
 <style lang="scss">
   .photo {
-    height: 500px;
+    height: 475px;
     width: 85%;
     background: whitesmoke;
     margin: 20px;
@@ -48,6 +55,8 @@ export default {
     ul {
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
+      font-size: 0.8rem
     }
 
     p {
@@ -64,7 +73,7 @@ export default {
     text-align: initial;
   }
 
-  .image {
+  .image-container {
     height: 300px;
     overflow: hidden;
   }
@@ -81,5 +90,10 @@ export default {
     width: 30px;
     border-radius: 50%;
     margin-right: 10px;
+  }
+
+  .heading {
+    font-weight: bold;
+    font-family: 'Open Sans'
   }
 </style>

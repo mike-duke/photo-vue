@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <SearchForm v-if="!photos.length" @addSearchTerm="fetchPhotos"></SearchForm>
-    <PhotoList v-else :photos="photos" :searchTerm="searchTerm"></PhotoList>
+    <PhotoList v-else :photos="photos" :searchTerm="searchTerm" @addSearchTerm="fetchPhotos"></PhotoList>
   </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
 * {
   box-sizing: border-box;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html {

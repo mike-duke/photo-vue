@@ -24,7 +24,8 @@ export default {
   },
   methods: {
     handleSubmit() {
-      this.$emit('addSearchTerm', this.searchTerm);
+      const lowerSearch = this.searchTerm.toLowerCase()
+      this.$emit('addSearchTerm', lowerSearch);
       this.searchTerm = '';
     },
   },
@@ -33,7 +34,7 @@ export default {
 
 <style lang="scss">
 .search-form {
-  background: whitesmoke;
+  background: rgba(20,66,112, 0.9);
   width: 50%;
   height: 50%;
   border-radius: 10px;
@@ -46,14 +47,16 @@ export default {
   text-align: center;
 
   .app-name {
-    color: darkslategray;
-    margin: 20px 0;
+    color: whitesmoke;
+    margin: 10px 0;
     font-size: 3.5rem;
     text-shadow: 3px 2px 7px gray;
   }
 
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    margin-bottom: 10px;
   }
 
   input {
