@@ -48,7 +48,6 @@ export default {
 * {
   box-sizing: border-box;
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -68,6 +67,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Montserrat', sans-serif;
 }
 </style>
 

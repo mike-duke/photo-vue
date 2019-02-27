@@ -94,6 +94,6 @@ export default {
 
   .heading {
     font-weight: bold;
-    font-family: 'Open Sans'
+    // font-family: 'Roboto Condensed'
   }
 </style>
