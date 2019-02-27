@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import SearchForm from './components/SearchForm.vue';
+  import SearchForm from './components/searchForm.vue';
   import PhotoList from './components/PhotoList.vue';
   import { keys } from '../keys.js';
   import { cleanPhotos } from './cleaner';
@@ -47,26 +47,27 @@
 <style lang="scss">
   * {
     box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
   }
 
   html {
     margin: 0;
     padding: 0;
-    background: black
+    background: black;
   }
   
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
     margin: 0;
     min-height: 100vh;
-    background: lightgray;
+    background: url('../public/pexels-photo-296649.jpeg');
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 0;
   }
 </style>
+
+
+/* Photo by Vladyslav Dukhin from Pexels */
+
