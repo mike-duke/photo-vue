@@ -3,7 +3,7 @@
     <h2>Viewing
       <span class="search-term">{{ searchTerm }}</span>
     </h2>
-    <div class="photos">
+    <div id="photos">
       <Photo v-for="photo in photos" :photo="photo" :key="photo.id"></Photo>
     </div>
   </section>
@@ -34,7 +34,7 @@
   .photo-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
     width: 100vw;
     background-attachment: fixed;
     background: rgba(0, 0, 0, 0.5);
@@ -44,14 +44,17 @@
     h2 {
       color: whitesmoke;
     }
+  }
+
+  #photos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media screen and (min-width: 400px) {
-      .photos {
-        display: flex;
-        flex-wrap: wrap;
-        
-      }
-    }
+      flex-wrap: wrap;
+      flex-direction: initial;
+    } 
   }
 
   .search-term {

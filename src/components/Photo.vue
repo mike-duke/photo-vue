@@ -61,6 +61,7 @@
 
   .photo-info {
     padding: 10px;
+    text-align: initial;
   }
 
   .image {
