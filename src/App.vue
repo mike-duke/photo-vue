@@ -17,24 +17,24 @@
     data() {
       return {
         searchTerm: '',
-        photos: []
+        photos: [],
+        url: 'https://api.unsplash.com/search/photos',
+        authorization: `Client-ID ${keys.appKey}`,
+        params: '&per_page=24&orientation=squarish'
       }
     },
     methods: {
       async fetchPhotos(searchTerm) {
         this.searchTerm = searchTerm;
-        // const url = 'https://api.unsplash.com/search/photos'
-        // const extras = '&per_page=24&orientation=squarish';
-        // const authorization = `Client-ID ${keys.appKey}`;
-        // const response = await fetch(`${url}?query=${this.searchTerm}${extras}`, {
-        //   method: 'GET',
-        //   headers: {
-        //     "Authorization": authorization
-        //   }
-        // });
-        // const data = await response.json();
-        // this.photos = cleanPhotos(data.results)
-        this.photos = mockPhotos
+        const response = await fetch(`${this.url}?query=${this.searchTerm}${this.params}`, {
+          method: 'GET',
+          headers: {
+            "Authorization": this.authorization
+          }
+        });
+        const data = await response.json();
+        this.photos = cleanPhotos(data.results)
+        // this.photos = mockPhotos
       }
     },
     components: {

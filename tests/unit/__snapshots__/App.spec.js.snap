@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot 1`] = `
+<div id="app">
+  <section class="search-form">
+    <h1 class="app-name">PhotoVue</h1>
+    <h3>What would you like to see?</h3>
+    <form><input type="text" placeholder="Enter search term" autofocus="autofocus" class="search-input"> <button disabled="disabled">Submit</button></form>
+  </section>
+</div>
+`;
