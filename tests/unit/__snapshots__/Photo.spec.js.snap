@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Photo should match the snapshot 1`] = `
+<article class="photo">
+  <div class="user-name"><img src="my ugly mug" alt="Joe Photo" class="user-image">
+    <p>Photo by Joe Photo</p>
+  </div>
+  <div class="image"><img src="someplace.com" alt="a picture of stuff" class="photo-img"></div>
+  <div class="photo-info">
+    <p>instagram: joephoto</p>
+    <p>location: Anywhere, USA</p>
+    <p>Tags:
+      <ul></ul>
+    </p>
+  </div>
+</article>
+`;
