@@ -15,5 +15,5 @@ An application to search and view photos on a user defined topic. This app was b
 
 ## Screenshots
 
-!(home view)[https://github.com/mike-duke/photo-vue/blob/master/public/Screen%20Shot%202019-02-27%20at%2012.29.03%20PM.png]
-!(photo view)[https://github.com/mike-duke/photo-vue/blob/master/public/Screen%20Shot%202019-02-27%20at%2012.28.48%20PM.png]
+![home view](https://github.com/mike-duke/photo-vue/blob/master/public/Screen%20Shot%202019-02-27%20at%2012.29.03%20PM.png)
+![photo view](https://github.com/mike-duke/photo-vue/blob/master/public/Screen%20Shot%202019-02-27%20at%2012.28.48%20PM.png)
