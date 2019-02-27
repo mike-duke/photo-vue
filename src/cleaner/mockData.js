@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { cleanPhotos } from './index';
 
 const raw = [{

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhotoList should match snapshot 1`] = `
+<section class="photo-list">
+  <h2>Viewing
+    <span class="search-term"></span></h2>
+  <div id="photos"></div>
+</section>
+`;

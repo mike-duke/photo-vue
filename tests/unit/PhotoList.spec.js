@@ -1,9 +1,14 @@
-import PhotoList from '../PhotoList.vue';
-import { shallowMount } from '@vue/test-utils';
+import PhotoList from '@/components/PhotoList';
+import { mount } from '@vue/test-utils';
 
 describe('PhotoList', () => {
   it('should match snapshot', () => {
-    const wrapper = shallowMount(PhotoList);
+    const wrapper = mount(PhotoList, {
+      propsData: {
+        photos: [],
+        searchTerm: ''
+      }
+    });
 
     expect(wrapper).toMatchSnapshot();
   });

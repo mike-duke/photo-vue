@@ -10,54 +10,54 @@
 </template>
 
 <script>
-  import Photo from './Photo.vue';
+import Photo from './Photo.vue';
 
-  export default {
-    name: 'PhotoList',
-    props: {
-      photos: {
-        type: Array,
-        required: true
-      },
-      searchTerm: {
-        type: String,
-        required: true
-      }
+export default {
+  name: 'PhotoList',
+  props: {
+    photos: {
+      type: Array,
+      required: true,
     },
-    components: {
-      Photo
-    }
-  }
+    searchTerm: {
+      type: String,
+      required: true,
+    },
+  },
+  components: {
+    Photo,
+  },
+};
 </script>
 
 <style lang="scss">
-  .photo-list {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100vw;
-    background-attachment: fixed;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px 0;
-    font-size: 1.4rem;
-    
-    h2 {
-      color: whitesmoke;
-    }
-  }
+.photo-list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100vw;
+  background-attachment: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+  font-size: 1.4rem;
 
-  #photos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media screen and (min-width: 400px) {
-      flex-wrap: wrap;
-      flex-direction: initial;
-    } 
+  h2 {
+    color: whitesmoke;
   }
+}
 
-  .search-term {
-    color: lightgreen;
+#photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 400px) {
+    flex-wrap: wrap;
+    flex-direction: initial;
   }
+}
+
+.search-term {
+  color: lightgreen;
+}
 </style>
